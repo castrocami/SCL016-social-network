@@ -3,8 +3,9 @@ export const initForm = () => {
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start( "#login-form", {
     signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
-    // Other config options...
+    signInSuccessUrl: '/home',
   });
 }
