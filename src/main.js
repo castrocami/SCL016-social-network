@@ -11,13 +11,13 @@ const content = document.getElementById("root");
 //Creating app routes
 
 switch (window.location.pathname) {
-    case "/login":
-        content.appendChild(loginForm());
-        initForm();
-        break;
+  case "/login":
+    content.appendChild(loginForm());
+    initForm();
+    break;
 
-    case "/logOutForm":
-        content.appendChild(logOutForm());
+  case "/logOutForm":
+    content.appendChild(logOutForm());
         break;
 
     case "/home":
@@ -32,7 +32,7 @@ switch (window.location.pathname) {
         content.appendChild(addPost());
         break;
 
-    default:
-        //
-        content.innerHTML = "No value found";
+  default:
+    content.appendChild(loginForm());
+    initForm();
 }
