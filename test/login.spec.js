@@ -1,8 +1,8 @@
-import { welcome } from '../src/components/welcome';
+import { loginForm } from '../src/views.js/login';
 
-describe('Welcome', () => {
+describe('Login', () => {
   it('should render without crashing', () => {
-    const el = welcome();
+    const el = loginForm();
     expect(el instanceof HTMLElement).toBe(true);
   });
 });
