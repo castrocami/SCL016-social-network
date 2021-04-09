@@ -14,37 +14,37 @@ export const navBar = () => {
     liHome.id = "li-home";
     const aHome = document.createElement("a");
     aHome.id = "a-home";
+    aHome.textContent = "Home";
+    aHome.href = "/home";
     liHome.appendChild(aHome);
     navBarUl.appendChild(liHome);
-    liHome.innerText = "Home";
-
-    // aHome.addEventListener("click", (e)=>
-    // e.preventDefault
-    // )
 
     const liProfile = document.createElement("li");
     liProfile.id = "li-profile";
     const aProfile = document.createElement("a");
     aProfile.id = "a-profile";
+    aProfile.href = "/profile";
     liProfile.appendChild(aProfile);
     navBarUl.appendChild(liProfile);
-    liProfile.innerText = "Profile";
+    aProfile.textContent = "Profile";
 
     const liAddPost = document.createElement("li");
     liAddPost.id = "li-AddPost";
     const aAddPost = document.createElement("a");
     aAddPost.id = "a-post";
+    aAddPost.href = "/addPost";
     liAddPost.appendChild(aAddPost);
     navBarUl.appendChild(liAddPost);
-    liAddPost.innerText = "Add Post";
+    aAddPost.textContent = "Add Post";
 
     const liSingOut = document.createElement("li");
     liSingOut.id = "li-singOut";
     const aSingOut = document.createElement("a");
     aSingOut.id = "a-signOut";
+    aSingOut.href = "/signout";
     liSingOut.appendChild(aSingOut);
     navBarUl.appendChild(liSingOut);
-    liSingOut.innerText = "Signout";
+    aSingOut.textContent = "Signout";
 
     return navBarDiv;
 };
