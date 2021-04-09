@@ -1,7 +1,10 @@
 /*! Terms: https://developers.google.com/terms */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);dialog {
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+dialog {
     position: absolute;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     width: -moz-fit-content;
     width: -webkit-fit-content;
     width: fit-content;
@@ -14,28 +17,37 @@
     background: white;
     color: black;
     display: none;
-  }
-  
-  dialog[open] {
+}
+
+dialog[open] {
     display: block;
-  }
-  
-  dialog + .backdrop {
+}
+
+dialog+.backdrop {
     position: fixed;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: rgba(0,0,0,0.1);
-  }
-  
-  /* for small devices, modal dialogs go full-screen */
-  @media screen and (max-width: 540px) {
-    dialog[_polyfill_modal] {  /* TODO: implement */
-      top: 0;
-      width: auto;
-      margin: 1em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+/* for small devices, modal dialogs go full-screen */
+
+@media screen and (max-width: 540px) {
+    dialog[_polyfill_modal] {
+        /* TODO: implement */
+        top: 0;
+        width: auto;
+        margin: 1em;
     }
-  }
-  
-  ._dialog_overlay {
+}
+
+._dialog_overlay {
     position: fixed;
-    top: 0; right: 0; bottom: 0; left: 0;
-  }
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
