@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: pink;
+    border: 6px solid red;
+}
+
+#navBarDiv {
+    background-color: pink;
+    border: 6px solid rgb(95, 95, 204);
+    width: 100vw;
+    height: 400px;
+}

@@ -1,4 +1,4 @@
-import { navBar } from "../components/nav-bar.js";
+// import { navBar } from "../components/nav-bar.js";
 export const logOutForm = () => {
     const logOutForm = document.createElement("li");
     logOutForm.id = "logOut-form";
