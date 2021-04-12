@@ -4,7 +4,6 @@ import { home } from './views.js/home.js';
 import { loginForm } from './views.js/login.js';
 import { profile } from './views.js/profile.js';
 import { initForm } from './lib/auth.js';
-import { logOutForm } from './views.js/logout.js';
 import { setCurrentUser } from './lib/currentUser.js';
 
 const content = document.getElementById('root');
@@ -15,17 +14,13 @@ if (window.location.pathname === '/login') {
   initForm();
 // If the user is not trying to enter to route login
 } else {
-  // We need to know if the user did 
+  // We need to know if the user did login
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      console.log(user);
       setCurrentUser(user);
       // User is signed in.
       // Creating app routes
       switch (window.location.pathname) {
-        case '/logOutForm':
-          content.appendChild(logOutForm());
-          break;
         case '/home':
           content.appendChild(home());
           break;
@@ -36,8 +31,7 @@ if (window.location.pathname === '/login') {
           content.appendChild(addPost());
           break;
         default:
-          content.appendChild(loginForm());
-          initForm();
+          content.appendChild(profile());
       }
     } else {
       // No user is signed in.
