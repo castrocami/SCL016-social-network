@@ -1,14 +1,12 @@
-import { navBar } from "../components/nav-bar.js";
-import {currentUserWelcome} from "../components/userwelcome.js";
+import { navBar } from '../components/nav-bar.js';
+import { currentUserWelcome } from '../components/userwelcome.js';
 
 export const home = () => {
+  const homeEl = document.createElement('box');
+  // home.textContent = "Home Page";
+  homeEl.id = 'addPost-form';
+  homeEl.append(navBar());
+  homeEl.appendChild(currentUserWelcome());
 
-    const home = document.createElement("box");
-    //home.textContent = "Home Page";
-
-    home.id = "addPost-form";
-    home.append(navBar());
-    home.appendChild(currentUserWelcome());
-
-    return home;
+  return homeEl;
 };

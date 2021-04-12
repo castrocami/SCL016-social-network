@@ -1,9 +1,10 @@
-import { navBar } from "../components/nav-bar.js";
-export const addPost = () => {
-    const addPost = document.createElement("div");
-    addPost.textContent = "Posting something";
-    addPost.id = "addPost-form";
-    addPost.appendChild(navBar());
+import { navBar } from '../components/nav-bar.js';
 
-    return addPost;
+export const addPost = () => {
+  const addPostEl = document.createElement('div');
+  addPostEl.textContent = 'Posting something';
+  addPostEl.id = 'addPost-form';
+  addPostEl.appendChild(navBar());
+
+  return addPostEl;
 };

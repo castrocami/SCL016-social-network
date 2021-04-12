@@ -4,7 +4,6 @@ export const userData = () =>{
   const profileEl = document.createElement('div');
   const nameUser = document.createElement('p');
   const emailUser = document.createElement('p');
-  console.log(getCurrentUser());
   nameUser.textContent = getCurrentUser().displayName;
   emailUser.textContent = getCurrentUser().email;
   profileEl.appendChild(nameUser);

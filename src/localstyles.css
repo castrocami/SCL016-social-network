@@ -64,3 +64,11 @@ a {
     margin-top: 20%;
     color: rgb(58, 18, 18);
 }
+
+#user-greeting {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30%;
+    color: whitesmoke;
+}
