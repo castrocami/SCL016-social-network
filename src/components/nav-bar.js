@@ -1,11 +1,26 @@
+import { burgerNavBar } from './burger-navBar.js';
+
 export const navBar = () => {
   // Creating nav container and ul element.
-  const navBarDiv = document.createElement('div');
-  navBarDiv.id = 'navBarDiv';
+  const navBarEl = document.createElement('nav');
+  navBarEl.id = 'navBarEl';
+  // Creating Logo
+  const logoName = document.createElement('div');
+  logoName.id = 'logoNavBar';
+  const tittleLogo = document.createElement('h1');
+  tittleLogo.textContent = 'Lola go';
+  logoName.appendChild(tittleLogo);
+  navBarEl.appendChild(logoName);
+  // Creating Ul
   const navBarUl = document.createElement('ul');
   navBarUl.id = 'navBarUl';
-  navBarDiv.appendChild(navBarUl);
-
+  navBarEl.appendChild(navBarUl);
+  // Listener burger
+  const navBarBurger = burgerNavBar();
+  navBarBurger.addEventListener('click', () => {
+    navBarUl.classList.toggle('nav-active');
+  });
+  navBarEl.appendChild(navBarBurger);
   // Creating 4 <li> elements whith its respectives <a> as links containers
 
   const liHome = document.createElement('li');
@@ -42,6 +57,7 @@ export const navBar = () => {
   aSingOut.textContent = 'Signout';
   liSingOut.appendChild(aSingOut);
   navBarUl.appendChild(liSingOut);
+
   // Out firebase
   aSingOut.addEventListener('click', () => {
     firebase
@@ -56,5 +72,5 @@ export const navBar = () => {
       });
   });
 
-  return navBarDiv;
+  return navBarEl;
 };
