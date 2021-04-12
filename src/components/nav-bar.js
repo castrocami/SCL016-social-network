@@ -43,7 +43,7 @@ export const navBar = () => {
   liSingOut.appendChild(aSingOut);
   navBarUl.appendChild(liSingOut);
   // Out firebase
-  aSingOut.addEventListener('click', (e) => {
+  aSingOut.addEventListener('click', () => {
     firebase
       .auth()
       .signOut()
@@ -51,7 +51,7 @@ export const navBar = () => {
       // Sign Out succesful
         aSingOut.href = '/login';
       })
-      .catch((error) => {
+      .catch(() => {
         // an error happended
       });
   });

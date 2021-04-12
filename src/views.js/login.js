@@ -1,9 +1,8 @@
-import { welcome } from "../components/welcome.js";
+import { welcome } from '../components/welcome.js';
 
 export const loginForm = () => {
-    const loginForm = document.createElement("div");
-
-    loginForm.appendChild(welcome());
-    loginForm.id = "login-form";
-    return loginForm;
+  const loginFormEl = document.createElement('div');
+  loginFormEl.appendChild(welcome());
+  loginFormEl.id = 'login-form';
+  return loginFormEl;
 };

@@ -1,6 +1,6 @@
-import { getCurrentUser } from '../lib/currentUser.js';
+import { getCurrentUser } from '../data/currentUser.js';
 
-export const userData = () =>{
+export const userData = () => {
   const profileEl = document.createElement('div');
   const nameUser = document.createElement('p');
   const emailUser = document.createElement('p');
