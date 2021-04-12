@@ -3,8 +3,8 @@ import { addPost } from './views.js/addPost.js';
 import { home } from './views.js/home.js';
 import { loginForm } from './views.js/login.js';
 import { profile } from './views.js/profile.js';
-import { initForm } from './lib/auth.js';
-import { setCurrentUser } from './lib/currentUser.js';
+import { initForm } from './data/auth.js';
+import { setCurrentUser } from './data/currentUser.js';
 
 const content = document.getElementById('root');
 // If the user is trying to enter to route login

@@ -8,7 +8,7 @@ body {
     height: 100vh;
     /* background-color: pink;
     border: 6px solid rgb(250, 118, 235); */
-    background-image: url("./lib/images/womanperiod.png");
+    background-image: url("./images/womanperiod.png");
     /* background-image: url("./lib/images/figs.png"); */
     background-size: cover;
 }
@@ -41,16 +41,16 @@ ul {
     /* border: 2px solid greenyellow; */
     align-items: center;
 }
-
-a:hover {
-    color: greenyellow;
-}
-
 a {
     text-decoration: none;
     font-size: 26px;
     color: honeydew;
 }
+a:hover {
+    color: greenyellow;
+}
+
+
 
 .firebaseui-card-content {
     margin-top: 50%;
