@@ -1,5 +1,3 @@
-// import "/localstyle.scss";
-
 export const navBar = () => {
     //creating nav container and ul element.
     const navBarDiv = document.createElement("div");
@@ -23,28 +21,42 @@ export const navBar = () => {
     liProfile.id = "li-profile";
     const aProfile = document.createElement("a");
     aProfile.id = "a-profile";
+    aProfile.textContent = "Profile";
     aProfile.href = "/profile";
     liProfile.appendChild(aProfile);
     navBarUl.appendChild(liProfile);
-    aProfile.textContent = "Profile";
 
     const liAddPost = document.createElement("li");
     liAddPost.id = "li-AddPost";
     const aAddPost = document.createElement("a");
     aAddPost.id = "a-post";
+    aAddPost.textContent = "Add Post";
     aAddPost.href = "/addPost";
     liAddPost.appendChild(aAddPost);
     navBarUl.appendChild(liAddPost);
-    aAddPost.textContent = "Add Post";
 
     const liSingOut = document.createElement("li");
     liSingOut.id = "li-singOut";
     const aSingOut = document.createElement("a");
     aSingOut.id = "a-signOut";
-    aSingOut.href = "/signout";
+    aSingOut.textContent = "Signout";
     liSingOut.appendChild(aSingOut);
     navBarUl.appendChild(liSingOut);
-    aSingOut.textContent = "Signout";
+    // Out firebase
+    aSingOut.addEventListener("click", (e) => {
+        console.log("use logged out");
+        firebase
+            .auth()
+            .signOut()
+            .then(() => {
+                //Sign Out succesful
+                aSingOut.href = "/login";
+                console.log("user signed out");
+            })
+            .catch((error) => {
+                //an error happended
+            });
+    });
 
     return navBarDiv;
 };
