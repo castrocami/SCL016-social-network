@@ -6,21 +6,15 @@
 
 body {
     height: 100vh;
-    /* background-color: pink;
-    border: 6px solid rgb(250, 118, 235); */
     background-image: url("./images/womanperiod.png");
-    /* background-image: url("./lib/images/figs.png"); */
     background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
 }
 
 #addPost-form {
-    /*border: 10px solid gold;*/
     font-size: 30px;
     height: 100vh;
-}
-
-.firebaseui-card-content {
-    margin-top: 50%;
 }
 
 #welcome-message {
@@ -32,6 +26,10 @@ body {
     color: rgb(58, 18, 18);
 }
 
+.firebaseui-card-content {
+    margin-top: 50%;
+}
+
 #user-greeting {
     display: flex;
     justify-content: center;
@@ -40,45 +38,35 @@ body {
     color: whitesmoke;
 }
 
-/*
-ul {
-    list-style-type: none;
-    /* border: 2px solid greenyellow; 
-    align-items: center;
-}
-a {
-    text-decoration: none;
-    font-size: 14px;
-    color: honeydew;
-}
-a:hover {
-    color: greenyellow;
-} */
 
 /* NAV BAR + BURGER */
+
 #navBarEl {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
     background-color: rgb(236, 117, 137);
     font-family: 'Poppins', sans-serif;
 }
-#logoNavBar{
-    color:honeydew;
-    text-transform:uppercase;
+
+#logoNavBar {
+    color: honeydew;
+    text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
-
 }
+
 #navBarUl {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     width: 30%;
 }
-#navBarUl li{
+
+#navBarUl li {
     list-style: none;
 }
+
 #navBarUl a {
     color: honeydew;
     text-decoration: none;
@@ -86,58 +74,100 @@ a:hover {
     font-weight: bold;
     font-size: 14px;
 }
-#burger{
+
+#burger {
     display: none;
     cursor: pointer;
 }
-#burger div{
+
+#burger div {
     width: 20px;
     height: 3px;
-    background-color:white;
-    margin: 5px;  
+    background-color: white;
+    margin: 5px;
 }
-@media screen and (max-width:1024px){
-    #navBarUl{
+
+@media screen and (max-width:1024px) {
+    #navBarUl {
         width: 60%;
     }
 }
-@media screen and (max-width:768px){
-    body{
-        overflow-x:hidden;
-    }
-    #navBarUl{
-       position: absolute ;
-       right: 0px;
-       height: 92vh;
-       top: 8vh;
-       background-color: rgb(236, 117, 137);
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       width: 50%;
-       transform: translateX(100%);
-       transition: transform 0.5s ease-in;
-   }
 
-   #burger{
-       display: block;
-   }
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    #navBarUl {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(236, 117, 137);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    #burger {
+        display: block;
+    }
 }
-.nav-active{
+
+.nav-active {
     transform: translateX(0%) !important;
 }
-@keyframes navLinkFade{
-    from{
+
+@keyframes navLinkFade {
+    from {
         opacity: 0;
-        transform:translateX(50px);
+        transform: translateX(50px);
     }
-    to{
-        opacity:1;
+    to {
+        opacity: 1;
         transform: translateX(0%);
     }
 }
 
+
 /* Form new Post*/
+
 #form-container {
-    display:flex;
+    display: grid;
+    justify-items: center;
+    height: 80vh;
+    width: 100vw;
+    margin-top: 100px;
+    /* border: 2px solid red; */
+}
+
+#new-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 40%;
+}
+
+#tittle-input {
+    font-size: 14px;
+    width: 100%;
+    height: 15%;
+    border: 2px solid grey;
+}
+
+#text-input {
+    font-size: 14px;
+    width: 100%;
+    height: 73%;
+    border: 2px solid grey;
+}
+
+#button-submit {
+    width: 180px;
+    height: 11%;
+    margin-top: 0.5%;
+    background-color: rgb(241, 241, 47);
 }
