@@ -46,9 +46,24 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 30%;
+    margin-top: 10%;
     color: whitesmoke;
 }
+/*ALL POSTS HOME*/
+#allPosts-div{
+    display: flex;
+    flex-direction: column;
+    border: 6px solid yellow;
+    margin: 5%;
+    font-weight: bold;
+}
+#allPosts-div li{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    border: 2px solid white;
+}
+
 
 
 /* NAV BAR + BURGER */

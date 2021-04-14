@@ -9,7 +9,8 @@ export const home = () => {
   homeEl.id = 'addPost-form';
   homeEl.append(navBar());
   homeEl.appendChild(currentUserWelcome());
-  homeEl.appendChild(footer())
   homeEl.appendChild(allPosts());
-    return homeEl;
+  homeEl.appendChild(footer());
+
+  return homeEl;
 };
