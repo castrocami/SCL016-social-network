@@ -1,3 +1,4 @@
+import { signOutFunction } from '../data/signOut.js';
 import { burgerNavBar } from './burger-navBar.js';
 
 export const navBar = () => {
@@ -52,25 +53,11 @@ export const navBar = () => {
 
   const liSingOut = document.createElement('li');
   liSingOut.id = 'li-singOut';
-  const aSingOut = document.createElement('a');
+  /* const aSingOut = document.createElement('a');
   aSingOut.id = 'a-signOut';
-  aSingOut.textContent = 'Signout';
-  liSingOut.appendChild(aSingOut);
+  aSingOut.textContent = 'Signout'; */
+  liSingOut.appendChild(signOutFunction());
   navBarUl.appendChild(liSingOut);
-
-  // Out firebase
-  aSingOut.addEventListener('click', () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-      // Sign Out succesful
-        aSingOut.href = '/login';
-      })
-      .catch(() => {
-        // an error happended
-      });
-  });
 
   return navBarEl;
 };
