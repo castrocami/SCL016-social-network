@@ -4,7 +4,7 @@ import { footer } from '../components/footer.js';
 // import { setupPosts } from '../components/all-posts.js';
 
 export const home = () => {
-    const homeEl = document.createElement('box');
+    const homeEl = document.createElement('div');
     // home.textContent = "Home Page";
     homeEl.id = 'addPost-form';
     homeEl.append(navBar());

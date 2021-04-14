@@ -6,10 +6,22 @@
 
 body {
     height: 100vh;
+    width: 100vw;
     background-image: url("./images/womanperiod.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+}
+
+#profile {
+    height: 100vh;
+    width: 100vw;
+    border: 6px solid yellow;
 }
 
 #addPost-form {
