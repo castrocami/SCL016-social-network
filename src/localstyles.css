@@ -198,3 +198,50 @@ body {
     margin-top: 0.5%;
     background-color: rgb(241, 241, 47);
 }
+
+
+/*profile*/
+#pro{
+  width: 100vw;
+  height:100vh;
+  border: 6px solid black;
+}
+
+#profile{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 30vw;
+  height:10vh;
+  border: 6px solid yellow;
+}
+
+#edition-container{
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height:20px;
+  border: 2px solid blue;
+
+}
+
+#edition-menu{
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  width: 90px;
+  height: 20px;
+}
+
+#edit-li{
+  border: 2px solid black;
+  width: 50px;
+  height: 20px;
+}
+
+#delete-li{
+  border: 2px solid black;
+  width: 50px;
+  height: 20px;
+}
