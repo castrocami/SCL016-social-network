@@ -6,7 +6,7 @@ import { footer } from '../components/footer.js';
 
 export const home = () => {
   const homeEl = document.createElement('div');
-  homeEl.id = 'addPost-form';
+  homeEl.id = 'home';
   homeEl.append(navBar());
   homeEl.appendChild(currentUserWelcome());
   homeEl.appendChild(allPosts());
