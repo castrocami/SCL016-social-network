@@ -1,3 +1,5 @@
+import { getCurrentUser } from '../data/currentUser.js';
+
 // Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
 export const formNewPost = () => {
@@ -21,6 +23,8 @@ export const formNewPost = () => {
     const postForm = {
       tittle: tittleInput.value,
       content: textInput.value,
+      user: getCurrentUser().email,
+      likes: [],
     };
     console.log(postForm);
 
