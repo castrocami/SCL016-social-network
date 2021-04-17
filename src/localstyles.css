@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-image: url("./images/womanperiod.png");
+    /* background-image: url("./images/womanperiod.png"); */
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
@@ -39,29 +39,51 @@ body {
 }
 
 .firebaseui-card-content {
-    margin-top: 50%;
+    margin-top: 60%;
+}
+
+
+/*HOME*/
+
+#home{
+  display:grid;
+  grid-template-rows:10% 10% 70% 10%;
+  width: 100vw;
+  height: 100vh;
+  border: 4px solid blue;
 }
 
 #user-greeting {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 10%;
-    color: whitesmoke;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  justify-self: center;
+  align-self: center;
+  color: black;
+  border: 6px solid green;
 }
-/*ALL POSTS HOME*/
+
 #allPosts-div{
-    display: flex;
-    flex-direction: column;
-    border: 6px solid yellow;
-    margin: 5%;
-    font-weight: bold;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  justify-self: center;
+  height: 50vh;
+  width: 60vw;
+  margin: 5%;
+  font-weight: bold;
+  font-size: 16px;
+  border: 6px solid yellow;
 }
 #allPosts-div li{
     display: flex;
     flex-direction: column;
-    color: whitesmoke;
-    border: 2px solid white;
+    color: black;  
+}
+
+#footer-div{
+  border: 2px solid black;
+  font-size: 20px;
+  color:black;
+  font-weight: strong;
 }
 
 
