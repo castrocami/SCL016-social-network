@@ -1,9 +1,9 @@
 import { getCurrentUser } from '../data/currentUser.js';
 
 // Function "is the post liked?"
-const isLiked = (post) => {
+export const isLiked = (post) => {
   for (let i = 0; i < post.likes.length; i += 1) {
-    if (post.likes === getCurrentUser().email) {
+    if (post.likes[i] === getCurrentUser().email) {
       // Ya tenia like
       return true;
     }
@@ -37,17 +37,17 @@ export const allPosts = () => {
         console.log('clicked', doc.data());
         // Conditional if is liked or not send information to firestore https://firebase.google.com/docs/firestore/manage-data/add-data?authuser=0#update_elements_in_an_array
         if (alreadyLiked) {
-          console.log('Unlike :(');
           setLikes.update({
             likes: firebase.firestore.FieldValue.arrayRemove(getCurrentUser().email),
           });
+          console.log('Unlike :(');
           alreadyLiked = false;
         } else {
-          console.log('like :)');
           // Atomically remove a region from the "regions" array field.
           setLikes.update({
             likes: firebase.firestore.FieldValue.arrayUnion(getCurrentUser().email),
           });
+          console.log('like :)');
           alreadyLiked = true;
         }
       });
