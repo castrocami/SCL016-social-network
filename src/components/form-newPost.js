@@ -2,6 +2,7 @@ import { getCurrentUser } from '../data/currentUser.js';
 
 // Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
+//FormNewPost is invoqued in addPost.js
 export const formNewPost = () => {
   // Creating html elements (Form)
   const newPostEl = document.createElement('form');
