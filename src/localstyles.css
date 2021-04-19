@@ -18,25 +18,6 @@ body {
     width: 100vw;
 }
 
-#profile {
-    height: 100vh;
-    width: 100vw;
-    border: 6px solid yellow;
-}
-
-#addPost-form {
-    font-size: 30px;
-    height: 100vh;
-}
-
-#welcome-message {
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    align-self: center;
-    margin-top: 20%;
-    color: rgb(58, 18, 18);
-}
 
 .firebaseui-card-content {
     margin-top: 60%;
@@ -180,6 +161,93 @@ body {
 }
 
 
+/* PROFILE VIEW*/
+
+#pro{
+  display:grid;
+  grid-template-rows:10% 10% 70% ;
+  width: 100vw;
+  height:100vh;
+  border: 6px solid black;
+}
+
+#profile{
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex; 
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  justify-content:center;
+  align-items: center;
+  width: 30vw;
+  height:10vh;
+  border: 6px solid rgb(0, 255, 34);
+}
+
+#welcome-message {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  align-self: center;
+  margin-top: 20%;
+  color: rgb(58, 18, 18);
+}
+
+#profilePosts-div{
+  grid-row-start: 3;
+  grid-row-end: 4;
+  justify-self: center;
+  width: 60%;
+  height: 100%;
+  border: 2px solid black;
+}
+
+#post-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 70% 30%;
+  height: 20%;
+  border: 2px solid grey;
+}
+
+#post-container li {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  list-style: none;
+}
+
+
+#edition-menu{
+  display: flex;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  align-self: end;
+  justify-self: end;
+  /* border: 2px solid black; */
+  width: 50%;
+  height: 50%;
+}
+
+
+#edit-li{
+  border: 2px solid black;
+  width: 50%;
+  height: 100%;
+}
+
+#delete-li{
+  border: 2px solid black;
+  width: 50%;
+  height: 100%;
+}
+
+
+
 /* Form new Post*/
 
 #form-container {
@@ -222,48 +290,9 @@ body {
 }
 
 
-/*profile*/
-#pro{
-  width: 100vw;
-  height:100vh;
-  border: 6px solid black;
-}
-
-#profile{
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  width: 30vw;
-  height:10vh;
-  border: 6px solid yellow;
-}
-
-#edition-container{
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-  height:20px;
-  border: 2px solid blue;
-
-}
-
-#edition-menu{
-  display: flex;
-  flex-direction: row;
-  border: 2px solid black;
-  width: 90px;
-  height: 20px;
-}
-
-#edit-li{
-  border: 2px solid black;
-  width: 50px;
-  height: 20px;
-}
-
-#delete-li{
-  border: 2px solid black;
-  width: 50px;
-  height: 20px;
+/* ADD POST VIEW*/
+#addPost-form {
+  font-size: 30px;
+  height: 100vh;
+  border: 4px solid pink;
 }
