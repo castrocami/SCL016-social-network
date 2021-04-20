@@ -33,7 +33,7 @@ if (window.location.pathname === '/login') {
           break;
         case '/aboutUs':
           content.appendChild(aboutUs());
-          
+          break;
         default:
           content.appendChild(profile());
       }

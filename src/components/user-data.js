@@ -1,5 +1,5 @@
 import { getCurrentUser } from '../data/currentUser.js';
-import { profile } from '../views.js/profile.js';
+// import { profile } from '../views.js/profile.js';
 
 export const userData = () => {
   const profileEl = document.createElement('div');

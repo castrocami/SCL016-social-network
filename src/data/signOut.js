@@ -17,4 +17,4 @@ export const signOutFunction = () => {
   });
   return aSingOut;
 };
-//this function is called in nav-bar.js
+// this function is called in nav-bar.js

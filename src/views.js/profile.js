@@ -3,7 +3,6 @@ import { userData } from '../components/user-data.js';
 // import { editOptions } from '../components/edit-delete.js';
 import { postProfile } from '../components/post-profile.js';
 
-
 export const profile = () => {
   const profileEl = document.createElement('div');
   profileEl.id = 'pro';
