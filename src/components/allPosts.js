@@ -1,15 +1,5 @@
-import { getCurrentUser } from '../data/currentUser.js';
+import { isLiked, likesFun } from './likes.js';
 
-// Function "is the post liked?"
-export const isLiked = (post) => {
-  for (let i = 0; i < post.likes.length; i += 1) {
-    if (post.likes[i] === getCurrentUser().email) {
-      // Ya tenia like
-      return true;
-    }
-  }
-  return false;
-};
 // All Posts function, returns html element div with all posts
 export const allPosts = () => {
   const allPostDiv = document.createElement('div');
@@ -29,28 +19,10 @@ export const allPosts = () => {
       // Create a button
       const likeButtonEl = document.createElement('button');
       likeButtonEl.textContent = '<3';
-      // Set likes and variable with function "isLiked?"
-      const setLikes = db.collection('allPosts').doc(doc.id);
-      let alreadyLiked = isLiked(doc.data());
-      // Set listener
-      likeButtonEl.addEventListener('click', () => {
-        console.log('clicked', doc.data());
-        // Conditional if is liked or not send information to firestore https://firebase.google.com/docs/firestore/manage-data/add-data?authuser=0#update_elements_in_an_array
-        if (alreadyLiked) {
-          setLikes.update({
-            likes: firebase.firestore.FieldValue.arrayRemove(getCurrentUser().email),
-          });
-          console.log('Unlike :(');
-          alreadyLiked = false;
-        } else {
-          // Atomically remove a region from the "regions" array field.
-          setLikes.update({
-            likes: firebase.firestore.FieldValue.arrayUnion(getCurrentUser().email),
-          });
-          console.log('like :)');
-          alreadyLiked = true;
-        }
-      });
+      // Post that Im going to update
+      const postToUpdate = db.collection('allPosts').doc(doc.id);
+      const alreadyLiked = isLiked(doc.data());
+      likeButtonEl.addEventListener('click', likesFun(postToUpdate, alreadyLiked));
       allPostsLi.appendChild(likeButtonEl);
       // doc.data() is never undefined for query doc snapshots
       console.log(doc.id, ' => ', doc.data());

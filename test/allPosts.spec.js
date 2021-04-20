@@ -1,21 +1,17 @@
-import { allPosts, isLiked } from '../src/components/allPosts.js';
+import { allPosts } from '../src/components/allPosts.js';
+import { setCurrentUser } from '../src/data/currentUser.js';
 
 describe('allPosts', () => {
+  setCurrentUser({ displayName: 'prueba1' });
   it('should render without crashing', () => {
     const el = allPosts();
     expect(el instanceof HTMLElement).toBe(true);
   });
 });
 
-describe('isLiked', () => {
-  it('should be a function', () => {
-    expect(typeof isLiked()).toBe('function');
-  });
-});
-
 // Initialize firebase firestore
 // const firebase = { firestore: () => {} };
-const db = firebase.firestore();
+/* const db = firebase.firestore();
 jest.mock(db);
 test('should fetch users', () => {
   const postForm = {
@@ -28,4 +24,4 @@ test('should fetch users', () => {
   // or you could use the following depending on your use case:
   // axios.get.mockImplementation(() => Promise.resolve(resp))
   return allPosts.all().then((data) => expect(data).toEqual(postForm));
-});
+}); */
