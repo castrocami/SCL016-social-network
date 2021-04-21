@@ -63,14 +63,14 @@ body {
   font-size: 16px;
   border: 1px solid #E57080;
   border-radius: 5px;
+}
 
-
-#allPosts-div li{
+/* #allPosts-div li{
     display: flex;
     flex-direction: column;
-    color: black;  
+    color: black; */ 
 
-}
+
 
 #footer-div{
   display: flex;
