@@ -1,16 +1,16 @@
 import { getCurrentUser } from '../data/currentUser.js';
-// import { allPosts } from './allPosts.js';
+import { allPosts } from './allPosts.js';
 
 export const postProfile = () => {
   const profilePostDiv = document.createElement('div');
   profilePostDiv.id = 'profilePosts-div';
   const db = firebase.firestore();
   // Create a reference to the collection
-  // const currentUserPost = db.collection('allPosts');
+  const currentUserPost = db.collection('allPosts');
 
   // Create a query against the collection.
-  const userProfile = getCurrentUser().email;
-  // const myPosts = currentUserPost.where('user', '==', userProfile);
+  let userProfile = getCurrentUser().email;
+  const myPosts = currentUserPost.where('user', '==', userProfile);
   db.collection('allPosts').where('user', '==', userProfile).get().then((querySnapshot) => {
     console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
@@ -23,15 +23,27 @@ export const postProfile = () => {
       const profilePostsLi = document.createElement('li');
       profilePostsLi.id = 'profile-post-li';
 
-      const profilePostsContainer = `<div id="title-post-${doc.id}">${profilePosts.tittle}</div><div id= "content-post-${doc.id}">${profilePosts.content}</div>`;
-      profilePostsLi.innerHTML += profilePostsContainer;
-      postContainer.appendChild(profilePostsLi);
+      const profilePostsContainer = `<div id= "title-post-${doc.id}">${profilePosts.tittle}</div><div id= "content-post-${doc.id}">${profilePosts.content}</div>`;
+      profilePostsLi.innerHTML += profilePostsContainer;  
+      postContainer.appendChild(profilePostsLi);  
+
       profilePostDiv.appendChild(postContainer);
       console.log(doc.id, '=>', doc.data());
 
-      // EDITING CONTENT//
+      db.collection("allPosts").doc(doc.id)
+        .onSnapshot((newPost) => {
+        console.log(`fue actualizado ${doc.id}`, newPost.data());
+      
+        const changedTittle = document.getElementById(`title-post-${doc.id}`);
+        const changedContent = document.getElementById(`content-post-${doc.id}`);
+        changedTittle.textContent = newPost.data().tittle;
+        changedContent.textContent = newPost.data().content;
+    });
 
-      // editing a post https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es-419
+
+      //EDITING CONTENT//
+
+      //editing a post https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es-419
 
       const editionMenu = document.createElement('ul');
       editionMenu.id = 'edition-menu';
@@ -39,44 +51,45 @@ export const postProfile = () => {
       editLi.id = 'edit-li';
       // editLi.textContent = 'edit';
       editionMenu.appendChild(editLi);
+     
 
       const editModal = () => {
         console.log('me estoy haciendo click');
 
         const modalEditContent = document.createElement('div');
         modalEditContent.id = 'modal-edit-content';
-
+      
         const spanCloseModal = document.createElement('span');
         spanCloseModal.id = 'span-close-modal';
-        spanCloseModal.textContent = 'X';
-        spanCloseModal.addEventListener('click', () => {
-          modalEditContent.style.display = 'none';
-        });
-
+        spanCloseModal.textContent = "X";
+        spanCloseModal.addEventListener("click", ()=> {
+        modalEditContent.style.display = "none";
+      })
+      
         const pEditTitle = document.createElement('p');
         pEditTitle.id = 'p-edit-title';
         pEditTitle.textContent = 'Titulo';
-
+      
         const titleEdition = document.createElement('textarea');
         titleEdition.id = 'title-edit';
-
+      
         const pEditContent = document.createElement('p');
         pEditContent.id = 'p-edit-content';
         pEditContent.textContent = 'Contenido';
-
+      
         const contentEdition = document.createElement('textarea');
         contentEdition.id = 'edit-content';
-        const editingMyPosts = () => {
-          const editMyPost = db.collection('allPosts').doc(doc.id);
+        const editingMyPosts =()=> {
+          const editMyPost = db.collection("allPosts").doc(doc.id);
           return editMyPost.update({
             tittle: titleEdition.value,
             content: contentEdition.value,
           })
-            .then(() => {
-              console.log('Document successfully updated!');
-              modalEditContent.style.display = 'none';
-            })
-            .catch((error) => {
+          .then(() => {
+            console.log("Document successfully updated!");
+            modalEditContent.style.display = "none";
+          })
+          .catch((error) => {
             // The document probably doesn't exist.
               console.error('Error updating document: ', error);
             });
@@ -86,6 +99,7 @@ export const postProfile = () => {
         buttonSubmitEdition.textContent = 'Guardar';
         buttonSubmitEdition.addEventListener('click', editingMyPosts);
 
+        
         modalEditContent.appendChild(buttonSubmitEdition);
         modalEditContent.appendChild(spanCloseModal);
         modalEditContent.appendChild(pEditTitle);
@@ -108,7 +122,7 @@ export const postProfile = () => {
       };
       editLi.addEventListener('click', editModal);
 
-      // DELETING CONTENT
+      //DELETING CONTENT
 
       const deleteLi = document.createElement('li');
       deleteLi.id = 'delete-li';
@@ -116,10 +130,10 @@ export const postProfile = () => {
       editionMenu.appendChild(deleteLi);
       postContainer.appendChild(editionMenu);
 
-      // Delete a Post
+      //Delete a Post
 
-      // const db = firebase.firestore();
-      const deleteMyPost = () => {
+      // const db = firebase.firestore();  
+      let deleteMyPost = () => {
         db.collection('allPosts').doc(doc.id).delete().then(() => {
           //  profilePostsLi.textContent = "";
           //  postContainer.innerHTML = "";
@@ -132,6 +146,6 @@ export const postProfile = () => {
       };
       deleteLi.addEventListener('click', deleteMyPost);
     });
-  });
+  });      
   return profilePostDiv;
 };
