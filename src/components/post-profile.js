@@ -24,11 +24,7 @@ export const postProfile = () => {
       profilePostsLi.id = 'profile-post-li';
 
 
-<<<<<<< HEAD
       const profilePostsContainer = `<div id= "title-post-${doc.id}">${profilePosts.tittle}</div><div id= "content-post-${doc.id}">${profilePosts.content}</div>`;
-=======
-      const profilePostsContainer = `<div id= "title-post ${doc.id}">${profilePosts.tittle}</div><div id= "content-post ${doc.id}">${profilePosts.content}</div>`;
->>>>>>> e3739eea411f8e40377c3a44c41f3fdd90070089
       profilePostsLi.innerHTML += profilePostsContainer;  
       postContainer.appendChild(profilePostsLi);  
       profilePostDiv.appendChild(postContainer);
@@ -38,13 +34,8 @@ export const postProfile = () => {
         .onSnapshot((newPost) => {
         console.log(`fue actualizado ${doc.id}`, newPost.data());
       
-<<<<<<< HEAD
         const changedTittle = document.getElementById(`title-post-${doc.id}`);
         const changedContent = document.getElementById(`content-post-${doc.id}`);
-=======
-        const changedTittle = document.getElementById(`title-post ${doc.id}`);
-        const changedContent = document.getElementById(`content-post ${doc.id}`);
->>>>>>> e3739eea411f8e40377c3a44c41f3fdd90070089
         changedTittle.textContent = newPost.data().tittle;
         changedContent.textContent = newPost.data().content;
     });
