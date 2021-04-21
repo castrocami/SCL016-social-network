@@ -23,7 +23,7 @@ export const postProfile = () => {
       const profilePostsLi = document.createElement('li');
       profilePostsLi.id = 'profile-post-li';
 
-      const profilePostsContainer = `<div id= "title-post">${profilePosts.tittle}</div><div id= "content-post">${profilePosts.content}</div>`;
+      const profilePostsContainer = `<div id="title-post-${doc.id}">${profilePosts.tittle}</div><div id= "content-post-${doc.id}">${profilePosts.content}</div>`;
       profilePostsLi.innerHTML += profilePostsContainer;
       postContainer.appendChild(profilePostsLi);
       profilePostDiv.appendChild(postContainer);
@@ -37,7 +37,7 @@ export const postProfile = () => {
       editionMenu.id = 'edition-menu';
       const editLi = document.createElement('li');
       editLi.id = 'edit-li';
-      editLi.textContent = 'edit';
+      // editLi.textContent = 'edit';
       editionMenu.appendChild(editLi);
 
       const editModal = () => {
@@ -83,7 +83,7 @@ export const postProfile = () => {
         };
         const buttonSubmitEdition = document.createElement('button');
         buttonSubmitEdition.id = 'button-submit-edittion';
-        buttonSubmitEdition.textContent = 'Save Changes';
+        buttonSubmitEdition.textContent = 'Guardar';
         buttonSubmitEdition.addEventListener('click', editingMyPosts);
 
         modalEditContent.appendChild(buttonSubmitEdition);
@@ -110,9 +110,9 @@ export const postProfile = () => {
 
       // DELETING CONTENT
 
-      const deleteLi = document.createElement('button');
+      const deleteLi = document.createElement('li');
       deleteLi.id = 'delete-li';
-      deleteLi.textContent = 'delete';
+      // deleteLi.textContent = 'delete';
       editionMenu.appendChild(deleteLi);
       postContainer.appendChild(editionMenu);
 
