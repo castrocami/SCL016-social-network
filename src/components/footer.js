@@ -6,7 +6,7 @@ export const footer = () => {
   footerLi.textContent = 'About us';
 
   const footerA = document.createElement('a');
-  footerA.id = 'footeer-a';
+  footerA.id = 'footer-a';
   footerA.href = '/AboutUs';
   footerLi.appendChild(footerA);
   footerDiv.appendChild(footerLi);
