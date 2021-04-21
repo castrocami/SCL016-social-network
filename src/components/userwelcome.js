@@ -6,7 +6,7 @@ export const currentUserWelcome = () => {
     name = user.displayName;
     userGreetting = document.createElement('h1');
     userGreetting.id = 'user-greeting';
-    userGreetting.textContent = `Bienvenida  ${name}!`;
+    userGreetting.textContent = `¡Bienvenida  ${name}!`;
   }
   return userGreetting;
 };

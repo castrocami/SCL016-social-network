@@ -47,17 +47,23 @@ body {
   grid-row-start: 3;
   grid-row-end: 3;
   justify-self: center;
-  height: 50vh;
+  height: 70vh;
   width: 60vw;
   margin: 5%;
   font-weight: bold;
   font-size: 16px;
   border: 6px solid yellow;
 }
-#allPosts-div li{
-    display: flex;
-    flex-direction: column;
-    color: black;  
+#allPosts-li{
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  width: 50vw;
+  margin: 5%;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #E57080;
+  border-radius: 5px;
 }
 
 #footer-div{
@@ -67,7 +73,17 @@ body {
   font-weight: strong;
 }
 
-
+#like-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  height: 20px;
+  width: 20px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border-color: whitesmoke;
+}
 
 /* NAV BAR + BURGER */
 
