@@ -1,14 +1,9 @@
 import { getCurrentUser } from '../data/currentUser.js';
-// import { allPosts } from './allPosts.js';
 
 export const postProfile = () => {
   const profilePostDiv = document.createElement('div');
   profilePostDiv.id = 'profilePosts-div';
   const db = firebase.firestore();
-  // Create a reference to the collection
-  // const currentUserPost = db.collection('allPosts');
-
-  // Create a query against the collection.
   const userProfile = getCurrentUser().email;
   // const myPosts = currentUserPost.where('user', '==', userProfile);
   db.collection('allPosts').where('user', '==', userProfile).get().then((querySnapshot) => {
@@ -16,7 +11,7 @@ export const postProfile = () => {
     querySnapshot.forEach((doc) => {
       const profilePosts = doc.data();
       console.log(profilePosts);
-
+      // Post container
       const postContainer = document.createElement('div');
       postContainer.id = 'post-container';
 
@@ -29,21 +24,17 @@ export const postProfile = () => {
 
       profilePostDiv.appendChild(postContainer);
       console.log(doc.id, '=>', doc.data());
-
+      // Changes https://firebase.google.com/docs/firestore/query-data/listen
       db.collection('allPosts').doc(doc.id)
         .onSnapshot((newPost) => {
           console.log(`fue actualizado ${doc.id}`, newPost.data());
-
           const changedTittle = document.getElementById(`title-post-${doc.id}`);
           const changedContent = document.getElementById(`content-post-${doc.id}`);
           changedTittle.textContent = newPost.data().tittle;
           changedContent.textContent = newPost.data().content;
         });
 
-      // EDITING CONTENT//
-
-      // editing a post https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es-419
-
+      // Editing a post https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es-419
       const editionMenu = document.createElement('ul');
       editionMenu.id = 'edition-menu';
       const editLi = document.createElement('li');
@@ -70,6 +61,7 @@ export const postProfile = () => {
 
         const titleEdition = document.createElement('textarea');
         titleEdition.id = 'title-edit';
+        titleEdition.textContent = profilePosts.tittle;
 
         const pEditContent = document.createElement('p');
         pEditContent.id = 'p-edit-content';
@@ -77,6 +69,7 @@ export const postProfile = () => {
 
         const contentEdition = document.createElement('textarea');
         contentEdition.id = 'edit-content';
+        contentEdition.textContent = profilePosts.content;
         const editingMyPosts = () => {
           const editMyPost = db.collection('allPosts').doc(doc.id);
           return editMyPost.update({
@@ -105,35 +98,19 @@ export const postProfile = () => {
         modalEditContent.appendChild(contentEdition);
         profilePostDiv.appendChild(modalEditContent);
 
-        // const modalTriggerButton = editLi;
-        //   const modal1 = profilePostDiv;
-        //   const modalCloseButton = spanCloseModal;
-        //   // modalTriggerButton.addEventListener("click", event => {
-        //   //     modal1.style.display = "flex";
-        // modalCloseButton.addEventListener("click", event => {
-        //           modal1.style.display = "none";
-        //         })
-        //   // })
         modalEditContent.display = 'initial';
         return modalEditContent;
       };
       editLi.addEventListener('click', editModal);
 
-      // DELETING CONTENT
-
+      // Delete a Post
       const deleteLi = document.createElement('li');
       deleteLi.id = 'delete-li';
-      // deleteLi.textContent = 'delete';
       editionMenu.appendChild(deleteLi);
       postContainer.appendChild(editionMenu);
 
-      // Delete a Post
-
-      // const db = firebase.firestore();
       const deleteMyPost = () => {
         db.collection('allPosts').doc(doc.id).delete().then(() => {
-          //  profilePostsLi.textContent = "";
-          //  postContainer.innerHTML = "";
           profilePostDiv.removeChild(postContainer);
           console.log('Document successfully deleted!');
         })
