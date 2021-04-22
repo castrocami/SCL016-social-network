@@ -25,7 +25,12 @@ body {
   grid-template-rows:10% 10% 70% 10%;
   width: 100vw;
   height: 100vh;
-  border: 4px solid blue;
+  /*border: 4px solid blue;*/
+  background-position: center center;
+  background-color: #F8E4D9;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./images/profile-background.png);
 }
 
 #user-greeting {
@@ -33,32 +38,39 @@ body {
   grid-row-end: 2;
   justify-self: center;
   align-self: center;
-  color: black;
-  border: 6px solid green;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  font-weight: bolder;
+  /*border: 6px solid green;*/
 }
 
 #allPosts-div{
   grid-row-start: 3;
   grid-row-end: 3;
   justify-self: center;
-  height: 70vh;
+  height: 65vh;
   width: 60vw;
-  margin: 5%;
-  font-weight: bold;
+  margin: 0%;
+  font-weight: bolder;
   font-size: 16px;
-  border: 6px solid yellow;
+  /*border: 6px solid yellow;*/
+  overflow: auto;
 }
 
 #allPosts-li{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 40% 40% 20%;
+  /*flex-direction: column;*/
   height: 15vh;
   width: 50vw;
-  margin: 5%;
-  font-weight: bold;
+  /*margin: 5%;*/
+  font-weight: bolder;
   font-size: 16px;
+  color:rgba(0, 0, 0, 0.5);
   border: 1px solid #E57080;
+  background-color: white;
   border-radius: 5px;
+  overflow: auto;
 }
 
 /* #allPosts-div li{
@@ -75,15 +87,16 @@ body {
   list-style: none;
   font-size: 14px;
   color: whitesmoke;
-  font-weight: strong;
+  font-weight: bolder;
   background-color: #E57080;
   /* border: 2px solid black;  */
 }
 
 #like-button {
-  display: flex;
-  align-items: center;
+  /*display: flex;
   justify-content: center;
+  flex-direction: row;*/
+  align-self: center;
   color: red;
   height: 20px;
   width: 20px;
