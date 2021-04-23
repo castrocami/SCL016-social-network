@@ -4,23 +4,20 @@ export const aboutUs = () => {
 
   const weAre = document.createElement('main');
   weAre.id = 'we-are';
-  
 
   const weOne = document.createElement('box');
-  weOne.id = "we-one";
- 
+  weOne.id = 'we-one';
+
   const weTwo = document.createElement('box');
-  weTwo.id = "we-two";
- 
+  weTwo.id = 'we-two';
 
   const weThree = document.createElement('box');
-  weThree.id = "we-three";
-
+  weThree.id = 'we-three';
 
   weAre.appendChild(weOne);
   weAre.appendChild(weTwo);
   weAre.appendChild(weThree);
-  whoWeAre.appendChild(weAre)
- 
+  whoWeAre.appendChild(weAre);
+
   return whoWeAre;
 };
