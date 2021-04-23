@@ -7,7 +7,7 @@ import { initForm } from './data/auth.js';
 import { setCurrentUser } from './data/currentUser.js';
 import { aboutUsContainer } from './views.js/view-about-us.js';
 
-//import { aboutUs } from './views/aboutUs.js';
+// import { aboutUs } from './views/aboutUs.js';
 
 const content = document.getElementById('root');
 // If the user is trying to enter to route login
