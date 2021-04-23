@@ -3,11 +3,11 @@ export const footer = () => {
   footerDiv.id = 'footer-div';
   const footerLi = document.createElement('li');
   footerLi.id = 'footer-li';
-  footerLi.textContent = 'About us';
 
   const footerA = document.createElement('a');
   footerA.id = 'footer-a';
-  footerA.href = '/AboutUs';
+  footerA.textContent = 'About us';
+  footerA.href = '/aboutUs';
   footerLi.appendChild(footerA);
   footerDiv.appendChild(footerLi);
 
