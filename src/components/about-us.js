@@ -1,29 +1,26 @@
-// import { footer } from './footer.js';
-// import {home}from "../views.js";
 export const aboutUs = () => {
-  const woWeAre = document.createElement('div');
-  woWeAre.id = 'woWeAre';
+  const whoWeAre = document.createElement('div');
+  whoWeAre.id = 'whoWeAre';
 
   const weAre = document.createElement('main');
   weAre.id = 'we-are';
-  weAre.innerText = 'hello';
+  
 
-  const weOne = document.createElement('div');
-  weOne.Id = 'one';
-  weOne.innerText = 'hello';
+  const weOne = document.createElement('box');
+  weOne.id = "we-one";
+ 
+  const weTwo = document.createElement('box');
+  weTwo.id = "we-two";
+ 
 
-  const weTwo = document.createElement('div');
-  weTwo.Id = 'two';
-  weTwo.innerText = 'hello';
+  const weThree = document.createElement('box');
+  weThree.id = "we-three";
 
-  const weThree = document.createElement('div');
-  weThree.Id = 'three';
-  weThree.innerText = 'hello';
 
   weAre.appendChild(weOne);
   weAre.appendChild(weTwo);
   weAre.appendChild(weThree);
-  woWeAre.appendChild(weAre);
-
-  return woWeAre;
+  whoWeAre.appendChild(weAre)
+ 
+  return whoWeAre;
 };
