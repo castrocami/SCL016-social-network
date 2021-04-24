@@ -2,7 +2,8 @@
   #navBarUl {
       width: 60%;
   }
-}
+ }
+
 
 @media (min-width: 992px) {
   #profilePosts-div {
@@ -28,7 +29,33 @@
   .firebaseui-page-provider-sign-in, .firebaseui-page-select-tenant {
     margin-bottom: 15%;
 }
+#allPosts-div{
+  height: 60vh;
+  width: 40vw;
+  margin: 0%;
+  font-weight: bolder;
+  font-size: 15px;
+  }
 }
+
+@media screen and (min-width:1500px) {
+  
+  #allPosts-li{
+    height: 15vh;
+    width: 35vw;
+    padding: 2%;
+    margin: 2%;
+    font-weight: bolder;
+    font-size: 15px
+  }
+  
+  /*#allPosts-div{ 
+  border: 4px solid green;*/
+} 
+
+
+
+
 
 @media screen and (max-width:768px) {
   body {
@@ -62,6 +89,14 @@
 #button-submit-edittion{
   font-size: 15px;
 }
+ #allPosts-li{
+  height: 15vh;
+  width: 60vw;
+  padding: 2%;
+  margin: 2%;
+  font-weight: bolder;
+  font-size: 12px
+}
 
 /* Add post styles */
 #addPost-form {
@@ -82,7 +117,6 @@
 }
 }
 
-
 @media screen and (min-width:769px) and (max-width: 1600px){
 
   #addPost-form {
@@ -102,9 +136,7 @@
     margin-top: 3%;
     font-size: 12px;
   }
-
 }
-
 
 @media screen and (min-width: 1601px) and (max-width: 2000px){
 
