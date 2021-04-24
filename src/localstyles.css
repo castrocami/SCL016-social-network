@@ -98,10 +98,10 @@ body {
   grid-row-end: 3;
   justify-self: center;
   height: 65vh;
-  width: 60vw;
+  width: 70vw;
   margin: 0%;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 14px;
   /*border: 6px solid yellow;*/
 }
 
@@ -110,15 +110,17 @@ body {
   grid-template-rows: 40% 40% 20%;
   /*flex-direction: column;*/
   height: 15vh;
-  width: 50vw;
-  /*margin: 5%;*/
+  width: 100vw;
+  padding: 2%;
+  margin: 2%;
   font-weight: bolder;
   font-size: 16px;
-  color:rgba(0, 0, 0, 0.5);
+  color :black;
   border: 1px solid #E57080;
   background-color: white;
   border-radius: 5px;
   overflow: auto;
+  /*justify-content: center;*/ 
 }
 
 /* #allPosts-div li{
@@ -140,6 +142,7 @@ body {
   /* border: 2px solid black;  */
 }
 
+
 #like-button {
   /*display: flex;
   justify-content: center;
@@ -151,7 +154,9 @@ body {
   background-color: whitesmoke;
   border-radius: 10px;
   border-color: whitesmoke;
-}
+  margin-left: auto;
+  margin-bottom: 1%;
+  }
 
 /* NAV BAR + BURGER */
 #navBarEl {
