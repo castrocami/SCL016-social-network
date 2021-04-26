@@ -20,6 +20,7 @@ body {
 }
 
 /* LOGIN */
+/* LOGIN */
 #login-form{
   display: flex;
   flex-direction: column;
@@ -31,8 +32,9 @@ body {
   background-color: #F8E4D9;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(./images/login-picture.jpg);
+  background-image: url(../images/login-picture.jpg);
 }
+
 #welcome-message {
   display: flex;
   justify-content: center;
@@ -41,20 +43,25 @@ body {
   color:#CA4141;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .firebaseui-page-provider-sign-in,.firebaseui-page-select-tenant{
   background: none;
   margin-bottom: 50%;
 }
+
 .firebaseui-container.mdl-card form {
   background-color:white;
 }
+
 .mdl-button--raised.mdl-button--colored {
   background:deeppink;
   color: rgb(255,255,255);
 }
+
 .mdl-button--primary.mdl-button--primary {
   color: pink;
 }
+
 .firebaseui-title, .firebaseui-subtitle {
   color: pink;
   direction: ltr;
@@ -66,19 +73,81 @@ body {
   text-align: left;
 }
 
-/*HOME*/
+/* NAV BAR + BURGER */
+/* NAV BAR + BURGER */
+#navBarEl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgb(236, 117, 137);
+  font-family: 'Poppins', sans-serif;
+}
 
+#logoNavBar {
+  color: honeydew;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+#navBarUl {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+#navBarUl li {
+  list-style: none;
+}
+
+#navBarUl a {
+  color: honeydew;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#burger {
+  display: none;
+  cursor: pointer;
+}
+
+#burger div {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.nav-active {
+  transform: translateX(0%) !important;
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0%);
+  }
+}
+
+/*HOME*/
+/*HOME*/
 #home{
   display:grid;
   grid-template-rows:10% 10% 70% 10%;
   width: 100vw;
   height: 100vh;
-  /*border: 4px solid blue;*/
   background-position: center center;
   background-color: #F8E4D9;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(./images/profile-background.png);
+  background-image: url(../images/profile-background.png);
 }
 
 #user-greeting {
@@ -89,7 +158,6 @@ body {
   color: rgba(0, 0, 0, 0.5);
   font-size: 25px;
   font-weight: bolder;
-  /*border: 6px solid green;*/
 }
 
 #allPosts-div{
@@ -102,14 +170,13 @@ body {
   margin: 0%;
   font-weight: bolder;
   font-size: 14px;
-  /*border: 6px solid yellow;*/
 }
 
 #allPosts-li{
   display: grid;
   grid-template-rows: 40% 40% 20%;
   height: 15vh;
-  width: 100vw;
+  /*width: 100vw;*/
   padding: 2%;
   margin: 2%;
   font-weight: bolder;
@@ -119,15 +186,7 @@ body {
   background-color: white;
   border-radius: 5px;
   overflow: auto;
-  /*justify-content: center;*/ 
 }
-
-/* #allPosts-div li{
-    display: flex;
-    flex-direction: column;
-    color: black; */ 
-
-
 
 #footer-div{
   display: flex;
@@ -138,9 +197,12 @@ body {
   color: whitesmoke;
   font-weight: bolder;
   background-color: #E57080;
-  /* border: 2px solid black;  */
 }
 
+#footer-a {
+  color:whitesmoke;
+  text-decoration: none;
+}
 
 #like-button {
   align-self: center;
@@ -154,81 +216,15 @@ body {
   margin-bottom: 1%;
   }
 
-/* NAV BAR + BURGER */
-#navBarEl {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: rgb(236, 117, 137);
-    font-family: 'Poppins', sans-serif;
-}
-
-#logoNavBar {
-    color: honeydew;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-}
-
-#navBarUl {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-}
-
-#navBarUl li {
-    list-style: none;
-}
-
-#navBarUl a {
-    color: honeydew;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-#burger {
-    display: none;
-    cursor: pointer;
-}
-
-#burger div {
-    width: 20px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-}
-
-
-.nav-active {
-    transform: translateX(0%) !important;
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-/* Form new Post*/
 /* ADD POST VIEW*/
-
-
-
+/* ADD POST VIEW*/
 #addPost-form {
   display: grid;
   grid-template-rows: 10% 80% 10%;
   font-size: 14px;
   width: 100vw;
   height: 100vh;
-  background-image: url("./images/lola.png"); 
+  background-image: url("../images/lola.png"); 
   background-size: contain;
 }
 
@@ -290,7 +286,6 @@ body {
     color:white;
 }
 
-
 /* PROFILE VIEW*/
 /* PROFILE VIEW*/
 #pro{
@@ -302,7 +297,7 @@ body {
   background-color: #F8E4D9;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(./images/profile-background.png);
+  background-image: url(../images/profile-background.png);
 }
 
 #profile{
@@ -316,6 +311,7 @@ body {
   color: rgba(0, 0, 0, 0.45);
   font-weight: bold;
 }
+
 #myPost-El{
   grid-row-start: 3;
   grid-row-end: 3;
@@ -323,6 +319,7 @@ body {
   font-size: 20px;
   margin-left: 14%;
 }
+
 #profilePosts-div{
   overflow: auto;
   grid-row-start: 4;
@@ -331,6 +328,7 @@ body {
   width: 80%;
   height: 100%;
 }
+
 #post-container{
   display: grid;
   grid-template-columns: 80% 20%;
@@ -342,6 +340,7 @@ body {
   padding: 2%;
   background-color:white;
 }
+
 #post-container li {
   grid-row-start: 1;
   grid-row-end: 1;
@@ -351,6 +350,7 @@ body {
   overflow: auto;
   font-size: 2vh;
 }
+
 #edition-menu{
   grid-row-start: 2;
   grid-row-end: 2;
@@ -362,25 +362,28 @@ body {
   width: 100%;
   height: 100%;
 }
+
 #edit-li{
   width: 25%;
   height: 100%;
-  background-image: url(./images/edit_blue.png);
+  background-image: url(../images/edit_blue.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 #title-post #content-post{
   color: #736B6B;
 }
+
 #delete-li{
   width: 20%;
   height: 100%;
-  background-image: url(./images/delete_blue.png);
+  background-image: url(../images/delete_blue.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-
+/*MODAL*/
 /*MODAL*/
 #modal-edit-content {
   display: grid;
@@ -397,6 +400,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #p-edit-title{
   grid-row-start: 2;
   grid-row-end: 2;
@@ -407,6 +411,7 @@ body {
   font-size: 2vw;
   font-weight: bold;
 }
+
 #p-edit-content{
   width: 100%; 
   grid-column-start: 2;
@@ -417,7 +422,8 @@ body {
   font-size: 2vw;
   font-weight: bold;
 }
- #title-edit {
+
+#title-edit {
   grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 2;
@@ -431,6 +437,7 @@ body {
   border-radius: 0.25rem;
   color: grey;
 } 
+
 #edit-content {
   grid-row-start: 5;
   grid-row-end: 5;
@@ -445,6 +452,7 @@ body {
   border-radius: 0.25rem;
   color: grey;
 }
+
 #span-close-modal {
   grid-row-start: 1;
   grid-row-end: 1;
@@ -457,6 +465,7 @@ body {
   color: #9B809E;
   font-size: 3vh;
 }
+
 #button-submit-edittion{
   grid-row-start: 6;
   grid-row-end: 6;
@@ -473,21 +482,18 @@ body {
   color: white;
   font-size: 1vw;
 }
+
 #span-close-modal:hover, #span-close-modal:focus {
   color: rgba(0, 0, 0, 0.5);
 }
 
-
-
 /* About Us */
 /* About Us */
-
 #div-about-us{
   display:grid;
   grid-template-rows: 10% 90%;
   width: 100vw;
   height: 100vh;
-  border: 2px solid black;
 }
 
 #whoWeAre{
@@ -499,11 +505,10 @@ body {
   align-self: center;
   width: 100vw;
   height: 90vh;
-  background-image: url(./images/Frame3.png);
-  border: 4px solid black; 
-  } 
+  background-image: url(../images/Frame3.png);
+} 
   
-  #we-are {
+#we-are {
   grid-row-start: 1;
   grid-row-end: 2;
   justify-self: center;
@@ -511,29 +516,21 @@ body {
   margin-top: 6%;
   width: 300px;
   height: 200px;
-  background-image: url(./images/nos2.png);  
+  background-image: url(../images/nos2.png);  
   background-size: cover; 
-  border: 5px solid #0D48DE;
   border-radius: 2%;
   padding: 1%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-  #motivation {
+#motivation {
   grid-row-start: 2;
   grid-row-end: 3;
   justify-self: center;
-  align-self: start;
   margin-top: 6%;
-  width: 80%;
-  height: auto;
-  font-size: 12px;
-  font-weight: bolder;
-  overflow: auto;
-  border: 1px solid  #fff4;
-  border-radius: 1%;
-  padding: 3%;
-  text-align: justify;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+  width: 70vw;
+  height: 35vh;
+  background-image: url(../images/details-aboutUs.png);
+  background-size: cover;  
+}
 
