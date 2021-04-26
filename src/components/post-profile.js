@@ -9,17 +9,15 @@ export const postProfile = () => {
   const userProfile = getCurrentUser().email;
 
   db.collection('allPosts').where('user', '==', userProfile).get().then((querySnapshot) => {
-    console.log(querySnapshot);
+    // console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
       const profilePosts = doc.data();
-      console.log(profilePosts);
+      // console.log(profilePosts);
 
       // Post container
-      const postContainer = document.createElement('div');
-      postContainer.id = 'post-container';
       const onePostElProfile = onePost(profilePosts, doc.id, false);
-      postContainer.appendChild(onePostElProfile);
-      profilePostDiv.appendChild(postContainer);
+      onePostElProfile.id = 'post-container';
+      profilePostDiv.appendChild(onePostElProfile);
       // console.log(doc.id, '=>', doc.data());
 
       // Edit a post https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es-419
@@ -37,11 +35,11 @@ export const postProfile = () => {
       const deleteLi = document.createElement('li');
       deleteLi.id = 'delete-li';
       editionMenu.appendChild(deleteLi);
-      postContainer.appendChild(editionMenu);
+      onePostElProfile.appendChild(editionMenu);
       const deleteMyPost = () => {
         db.collection('allPosts').doc(doc.id).delete().then(() => {
-          profilePostDiv.removeChild(postContainer);
-          console.log('Document successfully deleted!');
+          profilePostDiv.removeChild(onePostElProfile);
+          // console.log('Document successfully deleted!');
         })
           .catch((error) => {
             console.error('Error removing document: ', error);
