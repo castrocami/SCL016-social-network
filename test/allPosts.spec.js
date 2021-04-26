@@ -1,4 +1,4 @@
-import { allPosts } from '../src/components/allPosts.js';
+/* import { allPosts } from '../src/components/allPosts.js';
 import { setCurrentUser } from '../src/data/currentUser.js';
 
 describe('allPosts', () => {
@@ -8,7 +8,7 @@ describe('allPosts', () => {
     expect(el instanceof HTMLElement).toBe(true);
   });
 });
-
+*/
 // Initialize firebase firestore
 // const firebase = { firestore: () => {} };
 /* const db = firebase.firestore();

@@ -1,4 +1,4 @@
-import { aboutUsContainer } from '../src/views.js/view-about-us.js';
+import { aboutUsContainer } from '../src/views/view-about-us.js';
 
 describe('aboutUsContainer', () => {
   it('should render without crashing', () => {

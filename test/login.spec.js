@@ -1,4 +1,4 @@
-import { loginForm } from '../src/views.js/login';
+import { loginForm } from '../src/views/login';
 
 describe('Login', () => {
   it('should render without crashing', () => {
