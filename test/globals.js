@@ -39,6 +39,11 @@ global.firebase = {
     }),
 
   }),
+  auth: () => ({
+    signOut: () => new Promise((resolve) => {
+      resolve();
+    }),
+  }),
 };
 
 global.firebase.firestore.FieldValue = {
