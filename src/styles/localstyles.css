@@ -1,5 +1,4 @@
 @import 'media-queries.css';
-
 * {
     margin: 0px;
     padding: 0px;
@@ -143,7 +142,7 @@ body {
   grid-template-rows:10% 10% 70% 10%;
   width: 100vw;
   height: 100vh;
-  background-position: center center;
+  background-position: center;
   background-color: #F8E4D9;
   background-size: contain;
   background-repeat: no-repeat;
@@ -165,27 +164,29 @@ body {
   grid-row-start: 3;
   grid-row-end: 3;
   justify-self: center;
-  height: 65vh;
-  width: 70vw;
-  margin: 0%;
-  font-weight: bolder;
-  font-size: 14px;
+  width: 80%;
+  height: 100%;
+}
+#allpost-container{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 80% 20%;
+    height: 20%;
+    margin-bottom: 3%;
+    border-radius: 1%;
+    border: 1px solid #C5B1EC;
+    padding: 2%;
+    background-color: white;
 }
 
-#allPosts-li{
-  display: grid;
-  grid-template-rows: 40% 40% 20%;
-  height: 15vh;
-  /*width: 100vw;*/
-  padding: 2%;
-  margin: 2%;
-  font-weight: bolder;
-  font-size: 16px;
-  color :black;
-  border: 1px solid #E57080;
-  background-color: white;
-  border-radius: 5px;
-  overflow: auto;
+#allpost-container li{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    list-style: none;
+    overflow: auto;
+    font-size: 2vh;
 }
 
 #footer-div{
@@ -205,16 +206,17 @@ body {
 }
 
 #like-button {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
   align-self: center;
-  color: red;
   height: 20px;
   width: 20px;
-  background-color: whitesmoke;
   border-radius: 10px;
-  border-color: whitesmoke;
   margin-left: auto;
-  margin-bottom: 1%;
-  }
+}
+
 
 /* ADD POST VIEW*/
 /* ADD POST VIEW*/

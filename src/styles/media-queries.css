@@ -38,7 +38,7 @@
 }
 
 @media screen and (min-width:1500px) {
-  #allPosts-li {
+  #allPosts-div li {
     height: 15vh;
     width: 35vw;
     padding: 2%;
@@ -79,14 +79,6 @@
   }
   #button-submit-edittion{
     font-size: 15px;
-  }
-  #allPosts-li{
-    height: 15vh;
-    width: 60vw;
-    padding: 2%;
-    margin: 2%;
-    font-weight: bolder;
-    font-size: 12px
   }
   /* Add post view  vista iphone 8*/
   #new-post {
