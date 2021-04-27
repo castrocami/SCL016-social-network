@@ -12,7 +12,6 @@ export const postProfile = () => {
     // console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
       const profilePosts = doc.data();
-      // console.log(profilePosts);
 
       // Post container
       const onePostElProfile = onePost(profilePosts, doc.id, false);

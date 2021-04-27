@@ -53,9 +53,6 @@ export const navBar = () => {
 
   const liSingOut = document.createElement('li');
   liSingOut.id = 'li-singOut';
-  /* const aSingOut = document.createElement('a');
-  aSingOut.id = 'a-signOut';
-  aSingOut.textContent = 'Signout'; */
   liSingOut.appendChild(signOutFunction());
   navBarUl.appendChild(liSingOut);
 

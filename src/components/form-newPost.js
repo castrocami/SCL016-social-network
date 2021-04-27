@@ -2,9 +2,7 @@ import { getCurrentUser } from '../data/currentUser.js';
 
 // Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
-// FormNewPost is invoqued in addPost.js
 export const formNewPost = () => {
-  // Creating html elements (Form)
   const newPostEl = document.createElement('form');
   newPostEl.id = 'new-post';
   const tittleInput = document.createElement('textarea');
@@ -13,8 +11,6 @@ export const formNewPost = () => {
   textInput.id = 'text-input';
   const buttonSubmit = document.createElement('button');
   buttonSubmit.id = 'button-submit';
-  // const textButton = 'Submit';
-  // textButton.id = 'textButton-submit';
   buttonSubmit.textContent = 'Submit';
   buttonSubmit.type = 'submit';
 
@@ -27,7 +23,6 @@ export const formNewPost = () => {
       user: getCurrentUser().email,
       likes: [],
     };
-    console.log(postForm);
 
     if (postForm.tittle === '' && postForm.content === '') {
       alert('Por favor ingrese texto');

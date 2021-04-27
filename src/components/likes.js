@@ -1,10 +1,9 @@
 import { getCurrentUser } from '../data/currentUser.js';
 
-// Function "is the post liked?"
+//  "Is the post liked?"
 export const isLiked = (post) => {
   for (let i = 0; i < post.likes.length; i += 1) {
     if (post.likes[i] === getCurrentUser().email) {
-      // Ya tenia like
       return true;
     }
   }

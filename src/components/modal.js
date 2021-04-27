@@ -1,5 +1,4 @@
 export const editModal = (docData, docId) => {
-  console.log('me estoy haciendo click');
   const db = firebase.firestore();
   const modalEditContent = document.createElement('div');
   modalEditContent.id = 'modal-edit-content';
