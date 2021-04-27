@@ -1,5 +1,6 @@
 <div style="text-align: justify">  
-## Nombre del proyecto
+
+## Nombre del proyecto:
 Red Social: Lola Go with the Flow
 
 ## Autoras:
@@ -24,16 +25,20 @@ Las personas vivimos diferentes emociones y sensaciones cuando estamos menstruan
 ## Diseño de la Interfaz de Usuario:
 
 Prototipos:
-<img src="src/images/low-fi.jpeg" alt="paper-image" width="500"/>
-<img src="src/images/hi-fi2.jpeg" alt="paper-image" width="500"/>
-
-Para ver UX ir a:
-https://miro.com/app/board/o9J_lM-yoLo=/
-
-Para ver UI ir a: 
-https://www.figma.com/file/XOpO54V0tSYYFtj95rhb0G/Prototipo-Red-Social?node-id=18%3A78
+<p float="left">
+  <img src="src/images/low-fi.jpeg" alt="paper-image" width="500"/>
+  <img src="src/images/hi-fi2.jpeg" alt="paper-image" width="500"/>
+</p>
 
 </div>
+
+>Para ver UX ir a:
+https://miro.com/app/board/o9J_lM-yoLo=/
+
+>Para ver UI ir a: 
+https://www.figma.com/file/XOpO54V0tSYYFtj95rhb0G/Prototipo-Red-Social?node-id=18%3A78
+
+
 
 
 
