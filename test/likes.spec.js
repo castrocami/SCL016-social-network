@@ -3,13 +3,15 @@ import { setCurrentUser } from '../src/data/currentUser.js';
 
 describe('Likes ', () => {
   setCurrentUser({ displayName: 'prueba1' });
+  const mockedButton = document.createElement('spam');
+  mockedButton.classList.add('liked');
   const mockedpostToUpdate = { update: () => {} };
   it('should be a function', () => {
-    expect(typeof likesFun(mockedpostToUpdate, true)).toBe('function');
+    expect(typeof likesFun(mockedpostToUpdate, true, mockedButton)).toBe('function');
   });
   it('should like without fail', () => {
-    expect(likesFun(mockedpostToUpdate, true)).not.toThrow(Error);
-    expect(likesFun(mockedpostToUpdate, false)).not.toThrow(Error);
+    expect(likesFun(mockedpostToUpdate, true, mockedButton)).not.toThrow(Error);
+    expect(likesFun(mockedpostToUpdate, false, mockedButton)).not.toThrow(Error);
   });
 });
 
