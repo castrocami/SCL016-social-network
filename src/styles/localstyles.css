@@ -28,7 +28,7 @@ body {
   width: 100vw;
   padding: 10%;
   background-position: center;
-  background-color: #F8E4D9;
+  background-color: #f96f90;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(../images/login-picture.jpg);
@@ -39,7 +39,7 @@ body {
   justify-content: center;
   font-size: 48px;
   font-weight: bolder;
-  color:#CA4141;
+  color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -79,7 +79,7 @@ body {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: rgb(236, 117, 137);
+  background-color: #f96f90;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -154,7 +154,7 @@ body {
   background-color: #F8E4D9;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/profile-background.png);
+  /*background-image: url(../images/profile-background.png);*/
 }
 
 #user-greeting {
@@ -173,7 +173,8 @@ body {
   grid-row-start: 3;
   grid-row-end: 3;
   justify-self: center;
-  width: 80%;
+  /*width: 80%;*/
+  width: 100%;
   height: 100%;
 }
 .allpost-container{
@@ -198,7 +199,7 @@ body {
   font-size: 14px;
   color: whitesmoke;
   font-weight: bolder;
-  background-color: #E57080;
+  background-color: #f96f90;;
 }
 
 #footer-a {
@@ -233,7 +234,8 @@ body {
   font-size: 14px;
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/lola.png"); 
+  /*background-image: url("../images/lola.png"); */
+  background-color: #F8E4D9;
   background-size: contain;
 }
 
@@ -306,7 +308,7 @@ body {
   background-color: #F8E4D9;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/profile-background.png);
+  /*background-image: url(../images/profile-background.png);*/
 }
 
 #profile{
@@ -334,7 +336,7 @@ body {
   grid-row-start: 4;
   grid-row-end: 5;
   justify-self: center;
-  width: 80%;
+  width: 100%;
   height: 100%;
 }
 
@@ -514,7 +516,7 @@ body {
   align-self: center;
   width: 100vw;
   height: 90vh;
-  background-image: url(../images/Frame3.png);
+  /*background-image: url(../images/Frame3.png);*/
 } 
   
 #we-are {
@@ -525,7 +527,7 @@ body {
   margin-top: 6%;
   width: 300px;
   height: 200px;
-  background-image: url(../images/nos2.png);  
+  /*background-image: url(../images/nos2.png);  */
   background-size: cover; 
   border-radius: 2%;
   padding: 1%;
@@ -539,7 +541,7 @@ body {
   margin-top: 6%;
   width: 70vw;
   height: 35vh;
-  background-image: url(../images/details-aboutUs.png);
+  /*background-image: url(../images/details-aboutUs.png);*/
   background-size: cover;  
 }
 
