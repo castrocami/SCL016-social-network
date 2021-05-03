@@ -516,24 +516,12 @@ body {
   align-self: center;
   width: 100vw;
   height: 90vh;
-  /*background-image: url(../images/Frame3.png);*/
+  background-image: url(../images/about-us.jpg);
+  background-position: center;
+  background-color: #fffbf2;
+  background-size: contain;
+  background-repeat: no-repeat;
 } 
-  
-#we-are {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  justify-self: center;
-  align-self: start;
-  margin-top: 6%;
-  width: 300px;
-  height: 200px;
-  /*background-image: url(../images/nos2.png);  */
-  background-size: cover; 
-  border-radius: 2%;
-  padding: 1%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 #motivation {
   grid-row-start: 2;
   grid-row-end: 3;
