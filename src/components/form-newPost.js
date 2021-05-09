@@ -7,8 +7,10 @@ export const formNewPost = () => {
   newPostEl.id = 'new-post';
   const tittleInput = document.createElement('textarea');
   tittleInput.id = 'tittle-input';
+  tittleInput.placeholder = 'Ingresa un título...';
   const textInput = document.createElement('textarea');
   textInput.id = 'text-input';
+  textInput.placeholder = 'Ingresa el contenido...';
   const buttonSubmit = document.createElement('button');
   buttonSubmit.id = 'button-submit';
   buttonSubmit.textContent = 'Submit';
