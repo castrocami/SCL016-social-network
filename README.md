@@ -32,11 +32,6 @@ Prototipos:
 
 </div>
 
->Para ver UX ir a:
-https://miro.com/app/board/o9J_lM-yoLo=/
-
->Para ver UI ir a: 
-https://www.figma.com/file/XOpO54V0tSYYFtj95rhb0G/Prototipo-Red-Social?node-id=18%3A78
 
 
 
